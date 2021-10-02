@@ -1,0 +1,21 @@
+String edt1 = editText.getText().toString();
+        String edt2 = editText2.getText().toString();
+        float mass = Float.parseFloat(edt1);
+        float height = Float.parseFloat(edt2);
+        float bmi = mass / (height * height);
+        button = findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               if(bmi>=0 && bmi<=15){
+                   result.setText("Very Severly Underweight");
+               }
+               else if(bmi>=15 && bmi<=16){
+                   result.setText("Severly Underweight");
+               }
+               else if(bmi>=16 && bmi<=20){
+                   result.setText("Underweight");
+               }
+               else if(bmi>=20 && bmi <=30){
+                   result.setText("Normal");
+                }
